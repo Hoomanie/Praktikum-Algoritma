@@ -1,0 +1,21 @@
+from math import radians , cos , sin , asin , sqrt
+
+
+lat1 = float(input("masukan latitute lokasi 1 = "))
+lat2 = float(input("masukan latitute lokasi 2 = "))
+lon1 = float(input("masukan longitute lokasi 1 = "))
+lon2 = float(input("masukan longtute lokasi 2 = "))
+
+lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
+
+
+dlon = lon2 - lon1 
+dlat = lat2 - lat1 
+a = sin(dlat/2)**2 + cos(lat1) * cos(lat2) * sin(dlon/2)**2
+c = 2 * asin(sqrt(a)) 
+rkm = 6371
+rmil = 3956
+print ("---------------------------------------------------------")
+print ("jarak kedua titik koordinat dalam satuan Km =", (round(c * rkm , 2)),"Km")
+print ("jarak kedua titik koordinat dalam satuan Mil =", (round(c * rmil,2)),"Mil")
+print ("---------------------------------------------------------")
