@@ -1,0 +1,16 @@
+x = float(input("masukan panjang sisi A "))
+y = float(input("masukan panjang sisi B "))
+z = float(input("masukan panjang sisi C "))
+
+if x == y == z :
+    print("merupakan segitiga sama sisi")
+elif (x + y <= z) or (x + z <= y) or (y + z <= x) :
+    print("bukan merupakan segitiga")
+elif (x == y) or (x == z) or (y == z) :
+    print("merupakan segitiga sama kaki")
+elif (x*x + y*y == z*z) or (x*x + z*z == y*y) or (y*y + z*z == x*x) :
+    print("merupakan segitiga siku-siku")
+elif (x*x - y*y == z*z) or (x*x - z*z == y*y) or (y*y - z*z == x*x) :
+    print("merupakan segitiga siku-siku")
+else :
+    print("merupakan segitiga sembarang")
