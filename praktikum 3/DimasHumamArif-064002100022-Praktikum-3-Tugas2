@@ -1,0 +1,46 @@
+"""
+Created on Sun Oct 10 11:04:46 2021
+
+@author: user
+Dimas Humam Arif
+064002100022
+"""
+
+import math 
+
+print("""
+Menghitung Akar Persamaan Kuadrat dan Determinan
+Jika aX^2 + bX + c = 0
+Maka : """)
+a = int(input("Masukan nilai a yang di inginkan = "))
+b = int(input("Masukan nilai b yang di inginkan = "))
+c = int(input("Masukan nilai c yang di inginkan = "))
+if a == 0 : 
+    print("""bukan persamaan kuadrat""")
+
+else:
+    d = int(b ** 2) - (4 * a * c)
+    print(f"""
+Persamaan Kuadrat {a}X^2 + {b}X + {c} = 0""")
+    
+    if d > 0 :
+        X1 = (-b + math.sqrt(d)) / (2*a)
+        X2 = (-b + math.sqrt(d)) / (2*a)
+        print("dan merupakan akar TIDAK SAMA")
+        print(f"X1 = {X1}")
+        print(f"X2 = {X2}")
+        print(f"dengan deteminan{d}")
+        
+    elif d == 0 :
+        X1 = (-b ) / (2*a)
+        X2 = (-b ) / (2*a)
+        print("dan merupakan jenis akar KEMBAR")
+        print(f"X1 = {X1}")
+        print(f"X2 = {X2}")
+        print(f"dengan deteminan{d}")
+        
+    elif d < 0 :
+       print("dan merupakan Akar IMAGINER")
+       print(f"Akar X1 = -{b} + Akar {d} / {b} x {a}")
+       print(f"Akar X2 = -{b} - Akar {d} / {b} x {a}")   
+       print(f"dengan deteminan {d}")
