@@ -25,7 +25,7 @@ Persamaan Kuadrat {a}X^2 + {b}X + {c} = 0""")
     
     if d > 0 :
         X1 = (-b + math.sqrt(d)) / (2*a)
-        X2 = (-b + math.sqrt(d)) / (2*a)
+        X2 = (-b - math.sqrt(d)) / (2*a)
         print("dan merupakan akar TIDAK SAMA")
         print(f"X1 = {X1}")
         print(f"X2 = {X2}")
