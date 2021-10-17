@@ -1,0 +1,25 @@
+print("\n~~ program ini akan menghitung jumlah hari dibulan tertentu ~~")
+ulang = True
+while ulang == True:
+    print("\n ~~masukan '-1' untuk mengakhiri program ~~")
+    bulan = int(input("masukan bulan (1-12) : "))
+    if bulan == -1:
+        ulang = False
+        print("terimaksih telah menngunakan program saya")
+    elif bulan in [1,2,3,4,5,6,7,8,9,10,11,12]:
+        tahun = int(input("masukan tahun : "))
+        if tahun > 0: 
+            if(bulan == 1 or bulan == 3 or bulan == 5 or bulan == 7 or bulan == 8 or bulan == 10 or bulan == 12):
+               print("Ini termasuk 31 hari")    
+            elif (bulan == 2):
+                if(tahun % 4 == 0 and bulan == 2):
+                    print("Ini 29 hari")
+                else:
+                    print("ini termasuk 28 hari")            
+            else :
+                print("ini termasuk 30 hari")
+        else :
+            print(f"\n bulan {bulan} pada tahun {tahun} tidak dapat di identifikasi")
+    else:
+        print(f"bulan {bulan} tidak terdapat di kalender")
+
