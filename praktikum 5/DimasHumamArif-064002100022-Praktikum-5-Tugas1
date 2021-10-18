@@ -5,7 +5,7 @@ ulang = 0
 nomor = 0
 while ulang == 0:
     nomor += 1
-    x = str(input('"keluar" untuk mengakhiri!\nNilai siswa: '))
+    x = str(input('tekan ENTER untuk mencari rata-rata!\nNilai siswa: '))
     if x == '': 
         ulang = 1
     else:
