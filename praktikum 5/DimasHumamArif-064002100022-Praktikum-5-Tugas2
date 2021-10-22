@@ -1,0 +1,51 @@
+H = 0 #H untuk HARGA
+ulang = 1
+J = 0 #J untuk JUMLAH ORANG
+print("""Selamat datang di Zoo
+silahkan masukan umur saat memesan tiket untuk mengetahui harga
+masukan -1 untuk mengetahui harga total""")
+while ulang == 1:
+    J += 1
+    U = int(input('masukan umur pengunjung ke-{}: '.format(J)))
+    if U <= 2 and U >= 0 :
+        print('gratis')
+        H = 0
+    elif U >= 3 and U <= 12 :
+        print('harga = $14')
+        H += 14
+    elif U >= 65 :
+        print('harga = $18')
+        H += 65
+    elif U >= 13 and U <= 64:
+        print('harga = $23')
+        H += 23
+    else:
+        ulang = 0
+        J -= 1
+
+print(f'Total keseleuruhan adalah {J} orang ')
+print(f'Total harga tiket adalah = ${H}')
+C = int(input('masukan jumlanh uang : $')) #C jumlah uang
+T = C-H #T untuk sisa uang jika uang lebih
+K = H-C #K untuk kurang uang jika uang kuarang
+if C > H:
+    print("Total harga = ${H} Total uang = ${C}")
+    print(f"Kembalian = ${T}")
+    print("\n~~~Terimakasih selamat berkeliling Zoo~~~")
+elif C == H:
+    print('Anda memberikan uang pas')
+    print('Kembalian = $0')
+    print("\n~~~Terimakasih selamat berkeliling Zoo~~~")
+else:
+    print(f'Maaf uang nya kurang ${K}')
+    C2 = int(input('Masukan jumlah uang yang kurang : $'))#CK untuk uang yang kurang
+    K2 = (C2+C)-H #sisa uang jika seteah 2x bayar dan uang lebih
+    if C2 == K:
+        print('Uang anda pas')
+        print('Kembalian = $0')
+        print("\n~~~Terimakasih selamat berkeliling Zoo~~~")
+    elif C2 > K:
+        print(f"Kembalian nya ${K2}")
+        print("\n~~~Terimakasih selamat berkeliling Zoo~~~")
+    else:
+        print("Uang anda kurang")
