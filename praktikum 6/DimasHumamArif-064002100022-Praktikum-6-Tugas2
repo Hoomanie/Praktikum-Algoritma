@@ -1,0 +1,29 @@
+ulang = 1
+def bulan_biasa ():
+    if bulan in [1, 3, 5, 7, 8, 10, 12]:
+        x = 31
+    else:
+        x = 30
+    return x
+def bulan_kabisat ():
+    if(tahun % 4 == 0 and bulan == 2):
+        x = 29
+    else:
+        x = 28
+    return x
+
+print('mencari jumlah hari di bulan pada tahun tertentu')
+print('masukan -1 pada bulan untuk mengahiri program')
+while ulang == 1:      
+    bulan = int(input('masukan bulan 1-12 : '))
+    tahun = int(input('masukan tahun bulan tersebut : '))
+    if bulan == -1:
+        ulang = 0
+    elif tahun  <= 0:
+        print('\ntahun tidak terdefinisi')
+    elif bulan in[1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]:
+        print(f'\njumlah hari dalam 1 bulan = {bulan_biasa()} hari')
+    elif bulan == 2:
+        print(f'jumlah hari dalam 1 bulan = {bulan_kabisat()} hari')
+    else:
+        print('\ntidak terdefinisi')
