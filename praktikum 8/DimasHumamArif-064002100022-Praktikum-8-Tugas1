@@ -1,0 +1,11 @@
+def fibbo(n):
+    if n <= 0:
+        print('masukan angka positif!!')
+    elif n == 1 or n == 2 :
+        return 1
+    else :
+        return fibbo(n-1)+fibbo(n-2)
+
+while True :
+    x = int(input('masukan angkanya = '))
+    print(f"bilangan fibonaci ke {x} adalah", fibbo(x))
