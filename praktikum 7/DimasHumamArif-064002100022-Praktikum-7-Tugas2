@@ -1,0 +1,24 @@
+def ordinal(number):
+    if number in [11,12,13]:
+        x = "th"
+        return x
+    else:
+        identify(number)
+        return identify(number)
+    
+def identify(number):
+    lastdigit = int(str(number)[len(str(number))-1])
+    if lastdigit == 1:
+        x = "st"
+    elif lastdigit == 2:
+        x = "nd"
+    elif lastdigit == 3:
+        x = "st"
+    else :
+        x = "th"
+    return x
+
+ulang = 0
+while ulang == 0:    
+    number = int(input("masukan angka = "))
+    print(number, ordinal(number))
