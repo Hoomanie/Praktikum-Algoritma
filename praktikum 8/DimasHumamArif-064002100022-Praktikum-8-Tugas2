@@ -1,0 +1,7 @@
+def caripangkat(x,y):
+    hasil = x ** y
+    return hasil
+while True:
+    angka = int(input('masukan angkanya '))
+    pangkat = int(input('masukan pangkatnya '))
+    print(f'\nhasil dari {angka} pangkat {pangkat} adalah',caripangkat(angka,pangkat))
