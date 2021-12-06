@@ -1,0 +1,27 @@
+class mahasiswa:
+    nomer = 0
+    def __init__(self,nama,nim,tahun):
+        self.nama = str.upper(nama)
+        self.nim = str(nim)
+        self.tahun = str(tahun)
+        mahasiswa.nomer += 1
+    def biodata(self):
+        return str(f'{self.nama} ; {self.nim} ; {self.tahun}')
+    def print_hasil(self):
+        print()
+        print('~DATA MAHASISWA~')
+        print('NAMA : ', self.nama)
+        print('NIM : ', self.nim)
+        print('TAHUN : ', self.tahun)
+        
+
+while True:
+    No = (mahasiswa.nomer)+1
+    print(f'\nMAHASISWA KE {No}')
+    print('tekan ENTER untuk mengakhiri')
+    x = str(input('masukan nama mahasiswa : '))
+    if x == "":
+        break
+    y = str(input('masukan nim mahasiswa : '))
+    z = str(input('masukan tahun mahasiswa : '))
+    mahasiswa(x,y,z).print_hasil()
